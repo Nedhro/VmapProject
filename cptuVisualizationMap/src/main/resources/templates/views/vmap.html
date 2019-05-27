@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Visualization Map</title>
+<meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+<link href='https://fonts.googleapis.com/css?family=Roboto'
+	rel='stylesheet' type='text/css' />
+<link href='https://fonts.googleapis.com/css?family=Exo'
+	rel='stylesheet' type='text/css' />
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+	integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+	crossorigin="anonymous">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+<link rel="stylesheet"
+	href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+	integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+	crossorigin="" />
+<script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+	integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+	crossorigin=""></script>
+
+<!-- Load Leaflet -->
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" />
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript" src="js/leaflet-src.js"></script>
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+	<div class="container" id="vmap" style="display: block">
+		<div>
+			<br />
+		</div>
+		<div class="row">
+			<div class="col-sm-9 col-xs-12">
+
+				<div id='map'></div>
+
+				<script type="text/javascript" src="/js/bd-districts.geojson"></script>
+
+				<script type="text/javascript" src="/js/map.js"></script>
+			</div>
+
+
+			<div class="col-sm-3 col-xs-12">
+				<div>
+					<div class="row">
+						<div class="col-sm-8">Filter by :</div>
+						<div class="col-sm-2">
+							<a href="/vmap" style="font-size: px; color: #59ae0c;"> <i
+								class="fas fa-map-marker-alt"></i></a>
+						</div>
+						<div class="col-sm-2">
+							<i class="fa fa-list-ul" style="font-size: px; color: #7a28b6;"
+								onclick="replace('vmap','vlist')"></i>
+						</div>
+					</div>
+				</div>
+				<div>
+					<table class="table table-hover" id="table1">
+						<thead>
+							<tr>
+								<th scope="col">District Name</th>
+								<th scope="col">Total Tenders</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+
+							</tr>
+
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container" id="vlist" style="display: none">
+		<div class="col-xs-12">
+
+			<div id="filterSpace">
+				Filter by : <a href="/vmap" style="font-size: px; color: #59ae0c;"
+					onclick="replace('vlist','vmap')"> <i
+					class="fas fa-map-marker-alt"></i></a> <i class="fa fa-list-ul"
+					style="font-size: px; color: #7a28b6;"></i>
+			</div>
+			<div>
+				<table class="table table-hover" id="table2">
+					<thead>
+						<tr>
+							<th scope="col">SL No</th>
+							<th scope="col">Ministry</th>
+							<th scope="col">Division</th>
+							<th scope="col">Division Code</th>
+							<th scope="col">Organization</th>
+							<th scope="col">District</th>
+							<th scope="col">District Code</th>
+							<th scope="col">Amount</th>
+							<th scope="col">Award Date</th>
+							<th scope="col">PE Code</th>
+							<th scope="col">PE Name</th>
+							<th scope="col">Procurement Nature</th>
+							<th scope="col">Budget Type</th>
+							<th scope="col">Tender Status</th>
+
+
+						</tr>
+					</thead>
+					<tbody>
+						<tr></tr>
+					</tbody>
+
+				</table>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		function replace(hide, show) {
+			document.getElementById(hide).style.display = "none";
+			document.getElementById(show).style.display = "block";
+		}
+	</script>
+
+
+
+</body>
+</html>
