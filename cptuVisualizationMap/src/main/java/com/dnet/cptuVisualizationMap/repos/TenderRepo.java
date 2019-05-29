@@ -16,7 +16,7 @@ public interface TenderRepo extends JpaRepository<Tender, Long> {
 //	List<Object[]> findAllByDistrict();
 	
 	@Modifying
-	@Query("SELECT new com.dnet.cptuVisualizationMap.entities.TenderDTO(t.distCode, t.district, COUNT(t)) "+"FROM Tender t"+" GROUP BY t.distCode")
+	@Query("SELECT new com.dnet.cptuVisualizationMap.entities.TenderDTO(t.distCode, t.district, COUNT(t)) FROM Tender t GROUP BY t.distCode ORDER BY COUNT(t) DESC")
 	List<TenderDTO> findAllByDistCode();
 	
 	

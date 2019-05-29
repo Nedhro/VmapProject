@@ -16,7 +16,6 @@
 	crossorigin="anonymous">
 <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
-
 <link rel="stylesheet"
 	href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
 	integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
@@ -24,7 +23,6 @@
 <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
 	integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
 	crossorigin=""></script>
-
 <!-- Load Leaflet -->
 <link rel="stylesheet"
 	href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" />
@@ -35,7 +33,6 @@
 <script type="text/javascript" src="js/main.js"></script>
 <script type="text/javascript" src="js/leaflet-src.js"></script>
 <link rel="stylesheet" href="css/style.css">
-
 </head>
 <body>
 	<div class="container" id="vmap" style="display: block">
@@ -44,15 +41,10 @@
 		</div>
 		<div class="row">
 			<div class="col-sm-9 col-xs-12">
-
 				<div id='map'></div>
-
 				<script type="text/javascript" src="/js/bd-districts.geojson"></script>
-
 				<script type="text/javascript" src="/js/map.js"></script>
 			</div>
-
-
 			<div class="col-sm-3 col-xs-12">
 				<div>
 					<div class="row">
@@ -77,19 +69,15 @@
 						</thead>
 						<tbody>
 							<tr>
-
 							</tr>
-
 						</tbody>
 					</table>
 				</div>
 			</div>
 		</div>
 	</div>
-
 	<div class="container" id="vlist" style="display: none">
 		<div class="col-xs-12">
-
 			<div id="filterSpace">
 				Filter by : <a href="/vmap" style="font-size: px; color: #59ae0c;"
 					onclick="replace('vlist','vmap')"> <i
@@ -114,27 +102,20 @@
 							<th scope="col">Procurement Nature</th>
 							<th scope="col">Budget Type</th>
 							<th scope="col">Tender Status</th>
-
-
 						</tr>
 					</thead>
 					<tbody>
 						<tr></tr>
 					</tbody>
-
 				</table>
 			</div>
 		</div>
 	</div>
-
 	<script type="text/javascript">
 		function replace(hide, show) {
 			document.getElementById(hide).style.display = "none";
 			document.getElementById(show).style.display = "block";
 		}
 	</script>
-
-
-
 </body>
 </html>

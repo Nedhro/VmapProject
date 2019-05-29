@@ -12,6 +12,8 @@ import javax.persistence.TemporalType;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 @Entity()
 public class Tender {
 
@@ -29,6 +31,7 @@ public class Tender {
 	private int distCode;
 	private double amount;
 	@Temporal(TemporalType.TIMESTAMP)
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd hh:mm:ss a")
 	private Date awardDate;
 
 	public Tender() {
@@ -58,7 +61,6 @@ public class Tender {
 		this.division = division;
 	}
 
-	
 	public String getDistrict() {
 		return district;
 	}
@@ -114,8 +116,4 @@ public class Tender {
 	public void setAwardDate(Date awardDate) {
 		this.awardDate = awardDate;
 	}
-	
-	
-	
-
 }
