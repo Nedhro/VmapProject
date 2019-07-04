@@ -26,7 +26,7 @@ $
 					return this._div;
 				};
 				info.update = function(props) {
-					this._div.innerHTML = '<h4>District and division </h4>'
+					this._div.innerHTML = '<h4>District and Division</h4>'
 							+ (props ? '<b> Division:' + props.Division
 									+ '</b><br /> <b>District: '
 									+ props.District
